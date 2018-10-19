@@ -10,6 +10,32 @@
     #foreach($item in $items)
         $item.a
     #end
+    #set($p=$asyncMethod())
+    <div>pppp $p</div>
+    $method()
+    <div>$asyncMethod().get("async_id")</div>
+    #if ($a.asyncMethod())
+        true111111
+    #end
+
+
+
+    #set($num=$tag.getNumTest())
+    <div>num:$num</div>
+    #if($num)
+    <div>123</div>
+    #end
+    #set($obj=$tag.getObjTest())
+    <div>$obj.get('id')</div>
+    #set($list=$tag.getList("topicid=008597TM;listnum=10;liststart=0;titlelength=23;useproperty=false;pointstart=60;pointend=80;"))
+    <div>$list</div>
+    #if($list)
+    <div>12</div>
+    #foreach ($one in $list)
+    <div>$one</div>
+    <div>${one.get('id')}</div>
+    #end#end
+
 </script>
 
 hello test
